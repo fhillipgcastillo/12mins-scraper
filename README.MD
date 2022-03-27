@@ -19,7 +19,7 @@ scrapy runspider spiders/twelveminuteslinks.py  -o links.json --nolog
 
 ## Run full content extractor
 ```
-scrapy runspider spiders/twelveminutes.py -o summaries.json --nolog
+scrapy runspider spiders/twelveminutes.py -o summaries.csv --nolog
 ```
 
 this will extract the full content by reading the links file and scraping all teh content for each one
