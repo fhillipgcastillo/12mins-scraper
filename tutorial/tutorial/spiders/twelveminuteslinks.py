@@ -21,8 +21,7 @@ class TwelveminuteslinksSpider(scrapy.Spider):
                 'text_preview': page.xpath('div/div/section/div/p/text()').get(),
             }
 
-        next_page = response.css('li.next a::attr("href")').get()
-        # next_page = None
-        
+        next_page = response.css('#main > nav > div > a.next.page-numbers::attr("href")').get()
+
         if next_page is not None:
             yield response.follow(next_page, self.parse)
